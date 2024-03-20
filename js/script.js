@@ -50,13 +50,45 @@ const teamArray = [
 
 // MILESTONE 1
 // faccio un ciclo for per scorrere gli oggetti dell'array
+// for (let i = 0; i < teamArray.length; i++) {
+//     // prendo tutti gli elementi presenti negli oggetti
+//     const thisMember = teamArray[i]
+//     // li stampo in console
+//     console.log('Nome del membro: ' + thisMember.nameAndLastName)
+//     console.log('Ruolo del membro: ' + thisMember.role)
+//     console.log('Immagine del membro: ' + thisMember.image)
+// }
+// MILESTONE 2 
+// prendo l'elemento del dom dove appendere gli elementi 
+const container = document.querySelector('.ms-container')
+// creo un ul per il mio dom
+const ulContainer = document.createElement('ul')
+// la appendo al container 
+container.appendChild(ulContainer)
+
 for (let i = 0; i < teamArray.length; i++) {
     // prendo tutti gli elementi presenti negli oggetti
     const thisMember = teamArray[i]
-    console.log('Nome del membro: ' + thisMember.nameAndLastName)
+    // li stampo nel dom
+    const li = document.createElement('li')
+    const div = document.createElement('div')
+    div.textContent = ` Nome : ${thisMember.nameAndLastName} , Ruolo: ${thisMember.role} , Immagine: ${thisMember.image}`
+    li.classList.add('list-unstyled')
+    li.classList.add('mb-2')
 
-    console.log('Ruolo del membro: ' + thisMember.role)
-    console.log('Immagine del membro: ' + thisMember.image)
+    ulContainer.appendChild(li)
+    li.appendChild(div)
 }
 
-// li stampo in console
+
+
+
+
+
+
+
+
+
+
+
+

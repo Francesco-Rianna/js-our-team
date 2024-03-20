@@ -1,0 +1,6 @@
+.ms-container {
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0.6;
+    max-width: 800px;
+    margin: 0 auto;
+}
