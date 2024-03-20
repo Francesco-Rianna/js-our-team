@@ -138,16 +138,17 @@ for (let i = 0; i < teamArray.length; i++) {
 function createElementOfDom(member) {
     const li = document.createElement('li')
     const div = document.createElement('div')
-    const img = document.createElement('img')
+    div.classList.add('card')
+
+    // const img = document.createElement('img')
     // img.src = `./img/${member.image}`
     // img.alt = 'foto del membro'
     div.innerHTML += `
-     <div class=card >
-     <h3 class = text-primary> ${member.nameAndLastName} ${member.role} </h3>
-     
-     <img src="./img/${member.image}" alt="foto del membro" style="width: 300px" >
+    <h3 class = text-primary> ${member.nameAndLastName} ${member.role} </h3>
+    <img src="./img/${member.image}" alt="foto del membro" style="width: 300px" >
+    
+`
 
-     </div> `
     li.classList.add('list-unstyled')
     li.classList.add('mb-2')
 
