@@ -24,7 +24,7 @@ const teamArray = [
     {
         nameAndLastName: 'Angela caroll ',
         role: 'chief editor ',
-        image: 'angela-carrol-chief-editor.jpg'
+        image: 'angela-caroll-chief-editor.jpg'
     },
     {
         nameAndLastName: 'Walter Gordon',
@@ -58,7 +58,29 @@ const teamArray = [
 //     console.log('Ruolo del membro: ' + thisMember.role)
 //     console.log('Immagine del membro: ' + thisMember.image)
 // }
-// MILESTONE 2 
+// // MILESTONE 2
+// // prendo l'elemento del dom dove appendere gli elementi
+// const container = document.querySelector('.ms-container')
+// // creo un ul per il mio dom
+// const ulContainer = document.createElement('ul')
+// // la appendo al container
+// container.appendChild(ulContainer)
+
+// for (let i = 0; i < teamArray.length; i++) {
+//     // prendo tutti gli elementi presenti negli oggetti
+//     const thisMember = teamArray[i]
+//     // li stampo nel dom
+//     const li = document.createElement('li')
+//     const div = document.createElement('div')
+//     div.textContent = ` Nome : ${thisMember.nameAndLastName} , Ruolo: ${thisMember.role} , Immagine: ${thisMember.image}`
+//     li.classList.add('list-unstyled')
+//     li.classList.add('mb-2')
+
+//     ulContainer.appendChild(li)
+//     li.appendChild(div)
+// }
+
+// BONUS 1 
 // prendo l'elemento del dom dove appendere gli elementi 
 const container = document.querySelector('.ms-container')
 // creo un ul per il mio dom
@@ -72,15 +94,19 @@ for (let i = 0; i < teamArray.length; i++) {
     // li stampo nel dom
     const li = document.createElement('li')
     const div = document.createElement('div')
-    div.textContent = ` Nome : ${thisMember.nameAndLastName} , Ruolo: ${thisMember.role} , Immagine: ${thisMember.image}`
+    const img = document.createElement('img')
+    img.src = `./img/${thisMember.image}`
+    img.alt = 'foto del membro'
+    div.innerHTML += ` Nome : ${thisMember.nameAndLastName} , Ruolo: ${thisMember.role} , `
     li.classList.add('list-unstyled')
     li.classList.add('mb-2')
 
     ulContainer.appendChild(li)
     li.appendChild(div)
+    div.appendChild(img)
 }
 
-
+// FUNCTIONS
 
 
 
