@@ -46,9 +46,17 @@ const teamArray = [
         role: 'Graphic Designer',
         image: 'barbara-ramos-graphic-designer.jpg'
     },
-]
+];
 
 // MILESTONE 1
 // faccio un ciclo for per scorrere gli oggetti dell'array
-// prendo tutti gli elementi presenti negli oggetti
+for (let i = 0; i < teamArray.length; i++) {
+    // prendo tutti gli elementi presenti negli oggetti
+    const thisMember = teamArray[i]
+    console.log('Nome del membro: ' + thisMember.nameAndLastName)
+
+    console.log('Ruolo del membro: ' + thisMember.role)
+    console.log('Immagine del membro: ' + thisMember.image)
+}
+
 // li stampo in console
