@@ -92,23 +92,28 @@ for (let i = 0; i < teamArray.length; i++) {
     // prendo tutti gli elementi presenti negli oggetti
     const thisMember = teamArray[i]
     // li stampo nel dom
-    const li = document.createElement('li')
-    const div = document.createElement('div')
-    const img = document.createElement('img')
-    img.src = `./img/${thisMember.image}`
-    img.alt = 'foto del membro'
-    div.innerHTML += ` Nome : ${thisMember.nameAndLastName} , Ruolo: ${thisMember.role} , `
-    li.classList.add('list-unstyled')
-    li.classList.add('mb-2')
-
-    ulContainer.appendChild(li)
-    li.appendChild(div)
-    div.appendChild(img)
+    const elementOfDom = createElementOfDom(thisMember)
+    ulContainer.appendChild(elementOfDom)
 }
 
 // FUNCTIONS
 
+function createElementOfDom(member) {
+    const li = document.createElement('li')
+    const div = document.createElement('div')
+    const img = document.createElement('img')
+    img.src = `./img/${member.image}`
+    img.alt = 'foto del membro'
+    div.innerHTML += ` Nome : ${member.nameAndLastName} , Ruolo: ${member.role} , `
+    li.classList.add('list-unstyled')
+    li.classList.add('mb-2')
 
+
+    li.appendChild(div)
+    div.appendChild(img)
+    return li
+
+}
 
 
 
