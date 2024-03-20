@@ -80,13 +80,50 @@ const teamArray = [
 //     li.appendChild(div)
 // }
 
-// BONUS 1 
+// // BONUS 1 
+// // prendo l'elemento del dom dove appendere gli elementi 
+// const container = document.querySelector('.ms-container')
+// // creo un ul per il mio dom
+// const ulContainer = document.createElement('ul')
+// // la appendo al container 
+// container.appendChild(ulContainer)
+
+// for (let i = 0; i < teamArray.length; i++) {
+//     // prendo tutti gli elementi presenti negli oggetti
+//     const thisMember = teamArray[i]
+//     // li stampo nel dom
+//     const elementOfDom = createElementOfDom(thisMember)
+//     ulContainer.appendChild(elementOfDom)
+// }
+
+// // FUNCTIONS
+
+// function createElementOfDom(member) {
+//     const li = document.createElement('li')
+//     const div = document.createElement('div')
+//     const img = document.createElement('img')
+//     img.src = `./img/${member.image}`
+//     img.alt = 'foto del membro'
+//     div.innerHTML += ` Nome : ${member.nameAndLastName} , Ruolo: ${member.role} , `
+//     li.classList.add('list-unstyled')
+//     li.classList.add('mb-2')
+
+
+//     li.appendChild(div)
+//     div.appendChild(img)
+//     return li
+
+// }
+
+// BONUS 2
 // prendo l'elemento del dom dove appendere gli elementi 
 const container = document.querySelector('.ms-container')
 // creo un ul per il mio dom
 const ulContainer = document.createElement('ul')
+ulContainer.classList.add('text-center')
 // la appendo al container 
 container.appendChild(ulContainer)
+
 
 for (let i = 0; i < teamArray.length; i++) {
     // prendo tutti gli elementi presenti negli oggetti
@@ -102,18 +139,26 @@ function createElementOfDom(member) {
     const li = document.createElement('li')
     const div = document.createElement('div')
     const img = document.createElement('img')
-    img.src = `./img/${member.image}`
-    img.alt = 'foto del membro'
-    div.innerHTML += ` Nome : ${member.nameAndLastName} , Ruolo: ${member.role} , `
+    // img.src = `./img/${member.image}`
+    // img.alt = 'foto del membro'
+    div.innerHTML += `
+     <div class=card >
+     <h3 class = text-primary> ${member.nameAndLastName} ${member.role} </h3>
+     
+     <img src="./img/${member.image}" alt="foto del membro" style="width: 300px" >
+
+     </div> `
     li.classList.add('list-unstyled')
     li.classList.add('mb-2')
 
 
     li.appendChild(div)
-    div.appendChild(img)
+    // div.appendChild(img)
     return li
 
 }
+
+
 
 
 
