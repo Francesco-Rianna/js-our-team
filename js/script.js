@@ -12,7 +12,9 @@
 // Ragioniamo come sempre a step.
 // Prima la logica in italiano e poi traduciamo in codice.
 
+// MILESTONE 0
 // creo l'array di oggetti 
+
 const teamArray = [
     {
         nameAndLastName: 'Wayne Barnett',
@@ -45,3 +47,8 @@ const teamArray = [
         image: 'barbara-ramos-graphic-designer.jpg'
     },
 ]
+
+// MILESTONE 1
+// faccio un ciclo for per scorrere gli oggetti dell'array
+// prendo tutti gli elementi presenti negli oggetti
+// li stampo in console
